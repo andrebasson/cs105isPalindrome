@@ -1,7 +1,14 @@
 /*
- * 	myPalindrome:   Uses two stacks to see if a word is a palindrome - i.e. word that is the same when written in reverse order.  
- * 					Does this by pushing all the characters in the word into both stacks, but in opposite orders for each stack.
- * 					Finally compares each character by popping both stacks, comparing characters for equality.
+ * 	myPalindrome:   Version1:  Uses two stacks to see if a word is a palindrome - i.e. word that is the same when written in reverse order.  
+ * 						Does this by pushing all the characters in the word into both stacks, but in opposite orders for each stack.
+ * 						Finally compares each character by popping both stacks, comparing characters for equality.
+ * 						NOTE: JCF (java built-in) Stack ADT used (not a self implemented version)
+ * 
+ * 					Version2:  Uses one stack (LIFO) and one queue (FIFO) to see if a word is a palindrome.  Because a stack is a LIFO
+ * 						ADT and a queue is a FIFO ADT, comparing for equality the characters POPPED from the stack with those DEQUEUED
+ * 						from the queue is straight forward.
+ * 						NOTE: JCF (java built-in) LinkedList ADT used as a queue (not a self implemented version)
+ * 					
  */
 
 package cs105Palindrome;
@@ -17,10 +24,23 @@ public class myPalindrome {
 		String word1 = "peter";
 		String word2 = "otto";
 
+		System.out.println("Testing for palindromes by only using JCF Stack implementation");
+		System.out.println("--------------------------------------------------------------");
 		System.out.println(prog.isPalindrome(word1) ? "Yes, '"+word1+"' is a Palindrome" : "No, '"+word1+"' is NOT a Palindrome");
 		System.out.println(prog.isPalindrome(word2) ? "Yes, '"+word2+"' is a Palindrome" : "No, '"+word2+"' is NOT a Palindrome");
-	}
 
+		System.out.println("Testing for palindromes by only using JCF LinkedList's built-in Queue methods");
+		System.out.println("-----------------------------------------------------------------------------");		
+		System.out.println(prog.isPalindromeV2(word1) ? "Yes, '"+word1+"' is a Palindrome" : "No, '"+word1+"' is NOT a Palindrome");
+		System.out.println(prog.isPalindromeV2(word2) ? "Yes, '"+word2+"' is a Palindrome" : "No, '"+word2+"' is NOT a Palindrome");		
+	}
+	
+	private boolean isPalindromeV2(String w){
+		
+		return true;	// place holder
+	}
+	
+	
 	/**
 	 * Function isPalindrome()
 	 * @param w		any string
