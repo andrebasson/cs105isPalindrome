@@ -37,6 +37,12 @@ public class myPalindrome {
 		System.out.println(prog.isPalindromeV2(word2) ? "Yes, '"+word2+"' is a Palindrome" : "No, '"+word2+"' is NOT a Palindrome");		
 	}
 	
+	/**
+	 * Function isPalindrome()
+	 * @param w		any string to be tested if palindrome
+	 * @return		true, if w is a palindrome, false otherwise
+	 * 
+	 */
 	private boolean isPalindromeV2(String w){
 		Stack<Character> s1 = new Stack<Character>();
 		Queue<Character> q1 = new LinkedList<Character>();	// note: Queue is only a JCF interface; JCF LinkedList implements JCF Queue
